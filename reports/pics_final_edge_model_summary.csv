@@ -1,0 +1,14 @@
+parameter,value
+model_type,Logistic Regression
+preprocessing,StandardScaler
+input_feature_count,20
+input_window_duration_s,15.0
+decision_threshold,0.5
+development_samples,12
+development_positive_samples,3
+development_negative_samples,9
+edge_parameter_file,C:\Users\Mohamed Rizwan M J\Desktop\neonatal-apnea-monitor\reports\pics_edge_model_parameters.npz
+int8_max_probability_difference,0.0011647350260890477
+int8_mean_probability_difference,0.0004549265053932481
+int8_prediction_mismatches,0
+int8_verification,PASS

@@ -1,0 +1,23 @@
+{
+    "stage": "Stage 4 \u2014 Precursor Risk Dataset and Baseline",
+    "status": "DEVELOPMENT / VALIDATION",
+    "dataset_version": "1.0-development",
+    "n_infants": 10,
+    "n_windows": 55,
+    "n_controls": 50,
+    "n_precursors": 5,
+    "window_duration_s": 15,
+    "n_features": 20,
+    "loso_folds": 10,
+    "loso_accuracy": 0.8727272727272727,
+    "loso_sensitivity": 0.2,
+    "loso_specificity": 0.94,
+    "loso_precision": 0.25,
+    "loso_f1": 0.2222222222222222,
+    "loso_auroc": 0.588,
+    "loso_auprc": 0.20475254632745546,
+    "dataset_file": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_final_precursor_risk_dataset.csv",
+    "loso_metrics_file": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_final_loso_metrics.csv",
+    "loso_predictions_file": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_final_loso_predictions.csv",
+    "feature_importance_file": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_final_loso_rf_feature_importance.csv"
+}

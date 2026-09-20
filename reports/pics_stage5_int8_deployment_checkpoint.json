@@ -1,0 +1,51 @@
+{
+  "stage": 5,
+  "status": "deployment-ready software prototype",
+  "clinical_validation": false,
+  "input": {
+    "window_seconds": 15.0,
+    "timesteps": 11,
+    "features_per_timestep": 20,
+    "total_features": 220
+  },
+  "preprocessing": {
+    "imputation": "median",
+    "scaling": "StandardScaler"
+  },
+  "reference_model": {
+    "model": "Temporal Logistic Regression",
+    "threshold": 0.5
+  },
+  "keras_conversion": {
+    "verified": true,
+    "parameters": 221
+  },
+  "float32_tflite": {
+    "verified": true,
+    "windows_tested": 55,
+    "prediction_mismatches": 0
+  },
+  "int8_tflite": {
+    "verified": true,
+    "windows_tested": 55,
+    "model_size_bytes": 1728,
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "input_scale": 0.08555548638105392,
+    "input_zero_point": 12,
+    "output_scale": 0.00390625,
+    "output_zero_point": -128,
+    "max_probability_difference_vs_float32": 0.005645811557769775,
+    "mean_probability_difference_vs_float32": 0.00124669876195469,
+    "prediction_mismatches_vs_float32": 0,
+    "max_probability_difference_vs_sklearn": 0.00564582189631975,
+    "prediction_mismatches_vs_sklearn": 0
+  },
+  "artifacts": {
+    "sklearn_bundle": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_stage5_logistic_deployment_bundle.joblib",
+    "keras_model": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_stage5_logistic_deployment_model.keras",
+    "float32_tflite": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_stage5_logistic_float32.tflite",
+    "int8_tflite": "c:\\Users\\Mohamed Rizwan M J\\Desktop\\neonatal-apnea-monitor\\reports\\pics_stage5_logistic_int8.tflite"
+  },
+  "next_stage": "Edge inference software and hardware integration"
+}

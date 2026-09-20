@@ -1,0 +1,13 @@
+metric,value
+input_int8_min,-101.0
+input_int8_max,127.0
+weight_int8_min,-64.0
+weight_int8_max,127.0
+bias_int8,-127.0
+input_scale,0.025962923970683262
+weight_scale,0.005705108965912396
+bias_scale,0.011995159989812569
+maximum_probability_difference,0.0011647350260890477
+mean_probability_difference,0.0004549265053932481
+prediction_mismatches,0.0
+decision_threshold,0.5

@@ -1,0 +1,23 @@
+{
+    "control_windows_per_infant": 5,
+    "control_random_seed": 42,
+    "positive_windows": 5,
+    "positive_infants": [
+        1,
+        3,
+        9
+    ],
+    "total_infants": 10,
+    "total_controls_planned": 50,
+    "sampling_rules": [
+        "All validated positive precursor windows retained.",
+        "Controls sampled from all 10 infants.",
+        "Controls must be fully contained within merged safe intervals.",
+        "Controls must be 15 seconds long.",
+        "Controls must not overlap another sampled control.",
+        "Controls must not overlap any exclusion interval.",
+        "Sampling is deterministic using random seed 42.",
+        "Subject identity is retained for LOSO evaluation."
+    ],
+    "notebook_classification": "FINAL DATASET POLICY \u2014 CONTROL SAMPLING"
+}

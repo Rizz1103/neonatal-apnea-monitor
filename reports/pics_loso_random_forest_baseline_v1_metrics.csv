@@ -1,0 +1,2 @@
+model,evaluation,total_samples,positive_samples,negative_samples,TN,FP,FN,TP,accuracy,sensitivity,specificity,precision,f1,AUROC,AUPRC
+Balanced Random Forest,Pooled LOSO out-of-fold,55,5,50,47,3,4,1,0.8727272727272727,0.2,0.94,0.25,0.2222222222222222,0.576,0.1990776763016665

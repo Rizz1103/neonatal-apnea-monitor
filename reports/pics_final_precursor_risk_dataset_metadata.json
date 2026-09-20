@@ -1,0 +1,66 @@
+{
+    "dataset_name": "PICS Final Precursor-Risk Physiological Feature Dataset",
+    "dataset_version": "1.0-development",
+    "source_dataset": "PhysioNet PICSDB v1.0.0",
+    "source_subjects": "Infants 1-10",
+    "number_of_infants": 1,
+    "number_of_windows": 3,
+    "number_of_control_windows": 3,
+    "number_of_precursor_windows": 0,
+    "window_duration_seconds": 15.0,
+    "control_windows_per_infant": 5,
+    "physiological_feature_count": 20,
+    "physiological_features": [
+        "ecg_mean",
+        "ecg_std",
+        "ecg_rms",
+        "r_peak_count",
+        "mean_rr",
+        "std_rr",
+        "mean_hr",
+        "min_hr",
+        "max_hr",
+        "std_hr",
+        "sdnn",
+        "rmssd",
+        "resp_mean",
+        "resp_std",
+        "resp_rms",
+        "resp_peak_count",
+        "mean_resp_interval",
+        "std_resp_interval",
+        "mean_resp_rate",
+        "std_resp_rate"
+    ],
+    "ecg_filter": {
+        "bandpass_low_hz": 0.5,
+        "bandpass_high_hz": 40.0,
+        "butterworth_order": 4,
+        "notch_frequency_hz": 50.0,
+        "notch_q": 30.0
+    },
+    "respiration_filter": {
+        "bandpass_low_hz": 0.03,
+        "bandpass_high_hz": 2.0,
+        "butterworth_order": 4
+    },
+    "ecg_peak_constraints": {
+        "minimum_separation_seconds": 0.3,
+        "rr_min_seconds": 0.3,
+        "rr_max_seconds": 2.0
+    },
+    "respiration_peak_constraints": {
+        "minimum_separation_seconds": 0.8,
+        "interval_min_seconds": 0.8,
+        "interval_max_seconds": 10.0
+    },
+    "precursor_definition": "A 15-second window immediately preceding a project-derived neonatal event candidate.",
+    "precursor_label": 1,
+    "control_definition": "A 15-second window selected outside the defined event-exclusion intervals according to the frozen control-window sampling policy.",
+    "control_label": 0,
+    "event_time_definition": "For precursor windows, event_time_s equals the end of the 15-second precursor window.",
+    "normalization": "Not applied. Feature scaling must be fitted independently within each training fold during LOSO evaluation.",
+    "data_leakage_policy": "Leave-One-Subject-Out evaluation. Windows from the held-out infant must not contribute to model fitting or normalization.",
+    "dataset_status": "Frozen development dataset \u2014 not clinical validation.",
+    "random_seed": 42
+}

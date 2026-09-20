@@ -1,0 +1,11 @@
+event_number,bradycardia_onset_s,short_resp_with_brady_count,bradycardia_only_count,qualifying_resp_suppression_count,total_classified_periods
+1,1971.372,0,0,0,0
+2,3456.512,1,1,1,2
+3,3937.996,0,2,0,2
+4,4834.748,0,1,0,1
+5,7696.272,0,1,0,1
+6,8246.66,0,2,0,2
+7,13109.66,2,0,2,2
+8,14684.788,0,1,0,1
+9,16371.744,0,1,0,1
+10,17118.1,0,0,0,0

@@ -1,0 +1,19 @@
+{
+  "stage": 5,
+  "model": "Temporal Logistic Regression",
+  "window_seconds": 15.0,
+  "input_shape": [
+    11,
+    20
+  ],
+  "total_inputs": 220,
+  "threshold": 0.5,
+  "windows_tested": 55,
+  "predicted_positive": 5,
+  "predicted_negative": 50,
+  "max_probability_difference": 2.220446049250313e-16,
+  "mean_probability_difference": 1.137309862916241e-17,
+  "prediction_mismatches": 0,
+  "clinical_validation": false,
+  "status": "deployment inference prototype"
+}

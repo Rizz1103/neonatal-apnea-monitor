@@ -1,0 +1,13 @@
+component,status
+ECG filtering,PASS
+ECG R-peak detection,PASS
+Heart-rate calculation,PASS
+HRV calculation,PASS
+Respiration filtering,PASS
+Respiration peak detection,PASS
+Respiration peak reference matching,PASS
+Respiration-rate calculation,PASS
+PPG filtering,PASS
+PPG pulse-peak detection,PASS
+PPG interval quality,PASS
+PPG pulse-rate reference comparison,LIMITED / QUALITY-AWARE

@@ -1,0 +1,2 @@
+model,evaluation,TN,FP,FN,TP,accuracy,sensitivity,specificity,precision,f1,auroc,auprc,positive_windows,total_windows,status
+Temporal Logistic Regression,LOSO pooled out-of-fold,47,3,3,2,0.8909090909090909,0.4,0.94,0.4,0.4,0.8239999999999998,0.3049257759784076,5,55,DEVELOPMENT / VALIDATION RESULT

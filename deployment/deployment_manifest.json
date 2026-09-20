@@ -1,0 +1,39 @@
+{
+  "project": "Neonatal Apnea Monitor",
+  "deployment_stage": "Stage 5",
+  "model": {
+    "file": "model_int8.tflite",
+    "type": "fully_integer_quantized_tflite",
+    "input_shape": [
+      1,
+      220
+    ],
+    "input_dtype": "int8",
+    "output_shape": [
+      1,
+      1
+    ],
+    "output_dtype": "int8",
+    "threshold": 0.5
+  },
+  "input": {
+    "window_seconds": 15.0,
+    "timesteps": 11,
+    "features_per_timestep": 20,
+    "total_features": 220
+  },
+  "preprocessing": {
+    "imputation": "median",
+    "scaling": "StandardScaler"
+  },
+  "verification": {
+    "float32_tflite_windows": 55,
+    "float32_tflite_prediction_mismatches": 0,
+    "int8_windows": 55,
+    "int8_prediction_mismatches_vs_float32": 0,
+    "int8_prediction_mismatches_vs_sklearn": 0,
+    "int8_max_probability_difference": 0.005645811557769775
+  },
+  "clinical_validation": false,
+  "purpose": "Edge software integration prototype; not a clinical diagnostic device"
+}

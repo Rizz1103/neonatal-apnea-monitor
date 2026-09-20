@@ -1,0 +1,2 @@
+model,validation,n_infants,n_windows,positive_windows,negative_windows,tn,fp,fn,tp,accuracy,sensitivity,specificity,precision,f1,auroc,auprc,status
+Random Forest,LOSO,10,55,5,50,47,3,4,1,0.8727272727272727,0.2,0.94,0.25,0.2222222222222222,0.588,0.20475254632745546,DEVELOPMENT / VALIDATION RESULT

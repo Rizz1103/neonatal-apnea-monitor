@@ -1,0 +1,20 @@
+{
+    "risk_label": {
+        "control": 0,
+        "respiratory_risk": 1
+    },
+    "positive_event_classes": [
+        "short_resp_with_brady",
+        "respiratory_suppression"
+    ],
+    "excluded_event_classes": [
+        "bradycardia_only"
+    ],
+    "optional_apnea_class": "apnea_candidate",
+    "precursor_window_seconds": 15.0,
+    "event_exclusion_seconds": 0.0,
+    "control_min_distance_seconds": 60.0,
+    "control_boundary_margin_seconds": 30.0,
+    "dataset_target": "Early-warning risk prediction preceding project-derived respiratory-risk events",
+    "clinical_claim": "This dataset does not represent clinically confirmed neonatal apnea ground truth."
+}

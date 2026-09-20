@@ -1,0 +1,2 @@
+model,evaluation,total_windows,true_positive_windows,true_negative_windows,predicted_positive_windows,predicted_negative_windows,tn,fp,fn,tp,accuracy,sensitivity,specificity,precision,f1,auroc,auprc,threshold,epochs
+GRU,Outer LOSO pooled,55,5,50,23,32,30,20,2,3,0.6,0.6,0.6,0.13043478260869565,0.21428571428571427,0.7160000000000001,0.3291874129768867,0.5,25

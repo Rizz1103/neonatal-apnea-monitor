@@ -1,0 +1,2 @@
+model,evaluation,total_samples,positive_samples,negative_samples,TN,FP,FN,TP,accuracy,sensitivity,specificity,precision,f1,AUROC,AUPRC
+Balanced Logistic Regression,Pooled LOSO out-of-fold,55,5,50,42,8,4,1,0.7818181818181819,0.2,0.84,0.1111111111111111,0.14285714285714285,0.5840000000000001,0.29253929253929256

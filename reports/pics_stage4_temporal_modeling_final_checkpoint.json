@@ -1,0 +1,186 @@
+{
+  "project_stage": "Stage 4 \u2014 Temporal Risk Modeling",
+  "checkpoint_type": "development_validation",
+  "clinical_validation": false,
+  "dataset": {
+    "total_windows": 55,
+    "control_windows": 50,
+    "precursor_windows": 5,
+    "positive_bearing_infants": [
+      1,
+      3,
+      9
+    ],
+    "total_infants": 10,
+    "sequence_shape": [
+      11,
+      20
+    ],
+    "features_per_timestep": 20,
+    "timesteps": 11
+  },
+  "label_definition": {
+    "risk_0": "control",
+    "risk_1": "15-second precursor window",
+    "positive_windows": 5,
+    "negative_windows": 50
+  },
+  "validation": {
+    "method": "Leave-One-Subject-Out",
+    "folds": 10,
+    "subject_leakage": "PASS",
+    "test_infant_excluded_from_training": true,
+    "preprocessing_training_fold_only": true,
+    "imputation_training_fold_only": true,
+    "scaling_training_fold_only": true,
+    "temporal_window_order_verified": true
+  },
+  "temporal_logistic": {
+    "accuracy": 0.8909,
+    "sensitivity": 0.4,
+    "specificity": 0.94,
+    "precision": 0.4,
+    "f1": 0.4,
+    "auroc": 0.824,
+    "auprc": 0.3049,
+    "confusion_matrix": [
+      [
+        47,
+        3
+      ],
+      [
+        3,
+        2
+      ]
+    ],
+    "status": "development_validation"
+  },
+  "gru": {
+    "architecture": {
+      "input_shape": [
+        11,
+        20
+      ],
+      "gru_units": 16,
+      "dropout": 0.2,
+      "dense_units": 8,
+      "output": "sigmoid"
+    },
+    "training": {
+      "epochs": 25,
+      "batch_size": 8,
+      "learning_rate": 0.0005,
+      "threshold": 0.5,
+      "class_weighting": "balanced",
+      "validation_split": false,
+      "early_stopping": false,
+      "fresh_model_each_fold": true
+    },
+    "accuracy": 0.6,
+    "sensitivity": 0.6,
+    "specificity": 0.6,
+    "precision": 0.13043478,
+    "f1": 0.21428571,
+    "auroc": 0.716,
+    "auprc": 0.32918741,
+    "confusion_matrix": [
+      [
+        30,
+        20
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "positive_windows": 5,
+    "true_positive_windows": 3,
+    "false_negative_windows": 2,
+    "positive_window_sensitivity": 0.6,
+    "status": "development_validation"
+  },
+  "cnn": {
+    "architecture": {
+      "input_shape": [
+        11,
+        20
+      ],
+      "conv1d_filters": [
+        16,
+        32
+      ],
+      "kernel_size": 3,
+      "global_average_pooling": true,
+      "dropout": 0.2,
+      "dense_units": 8,
+      "output": "sigmoid"
+    },
+    "training": {
+      "epochs": 25,
+      "batch_size": 8,
+      "learning_rate": 0.0005,
+      "threshold": 0.5,
+      "class_weighting": "balanced",
+      "validation_split": false,
+      "early_stopping": false,
+      "fresh_model_each_fold": true
+    },
+    "accuracy": 0.8181818181818182,
+    "sensitivity": 0.0,
+    "specificity": 0.9,
+    "precision": 0.0,
+    "f1": 0.0,
+    "auroc": 0.588,
+    "auprc": 0.13893067716597127,
+    "confusion_matrix": [
+      [
+        45,
+        5
+      ],
+      [
+        5,
+        0
+      ]
+    ],
+    "positive_windows": 5,
+    "true_positive_windows": 0,
+    "false_negative_windows": 5,
+    "positive_window_sensitivity": 0.0,
+    "status": "development_validation"
+  },
+  "positive_window_analysis": {
+    "total_precursor_windows": 5,
+    "cnn_true_positive": 0,
+    "cnn_false_negative": 5,
+    "cnn_positive_window_sensitivity": 0.0,
+    "analysis_file": "pics_temporal_loso_cnn_positive_window_analysis.csv"
+  },
+  "saved_artifacts": {
+    "temporal_dataset": "pics_final_temporal_X_sequences.npy",
+    "temporal_labels": "pics_final_temporal_y_sequences.npy",
+    "temporal_metadata": "pics_final_temporal_sequence_metadata.csv",
+    "logistic_predictions": "pics_temporal_loso_logistic_predictions.csv",
+    "logistic_metrics": "pics_temporal_loso_logistic_metrics.csv",
+    "gru_predictions": "pics_temporal_loso_gru_predictions.csv",
+    "gru_fold_summary": "pics_temporal_loso_gru_fold_summary.csv",
+    "gru_metrics": "pics_temporal_loso_gru_metrics.csv",
+    "gru_per_infant": "pics_temporal_loso_gru_per_infant.csv",
+    "gru_positive_windows": "pics_temporal_loso_gru_positive_window_analysis.csv",
+    "cnn_predictions": "pics_temporal_loso_cnn_predictions.csv",
+    "cnn_fold_summary": "pics_temporal_loso_cnn_fold_summary.csv",
+    "cnn_metrics": "pics_temporal_loso_cnn_metrics.csv",
+    "cnn_per_infant": "pics_temporal_loso_cnn_per_infant.csv",
+    "cnn_positive_windows": "pics_temporal_loso_cnn_positive_window_analysis.csv"
+  },
+  "limitations": [
+    "Only five positive precursor windows are available.",
+    "Positive windows occur in only three infants.",
+    "Results are development/validation results.",
+    "The dataset is not sufficient for clinical validation.",
+    "No clinical diagnosis is claimed.",
+    "Fixed threshold results should not be interpreted as threshold optimization.",
+    "Model selection is descriptive rather than a clinical performance ranking."
+  ],
+  "next_stage": "Deployment preparation and edge inference",
+  "generated_at": "2026-09-19T23:15:58.416374"
+}

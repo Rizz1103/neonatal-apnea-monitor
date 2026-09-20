@@ -1,0 +1,63 @@
+{
+  "window_seconds": 15.0,
+  "timesteps": 11,
+  "features_per_timestep": 20,
+  "total_features": 220,
+  "feature_order": [
+    "ecg_mean",
+    "ecg_std",
+    "ecg_rms",
+    "r_peak_count",
+    "mean_rr",
+    "std_rr",
+    "mean_hr",
+    "min_hr",
+    "max_hr",
+    "std_hr",
+    "sdnn",
+    "rmssd",
+    "resp_mean",
+    "resp_std",
+    "resp_rms",
+    "resp_peak_count",
+    "mean_resp_interval",
+    "std_resp_interval",
+    "mean_resp_rate",
+    "std_resp_rate"
+  ],
+  "ecg_processing": {
+    "bandpass_low_hz": 0.5,
+    "bandpass_high_hz": 40.0,
+    "filter_order": 4,
+    "notch_frequency_hz": 50.0,
+    "notch_q": 30.0,
+    "minimum_rr_seconds": 0.3
+  },
+  "respiration_processing": {
+    "bandpass_low_hz": 0.03,
+    "bandpass_high_hz": 2.0,
+    "filter_order": 4,
+    "minimum_peak_distance_seconds": 0.8,
+    "prominence_factor": 0.1
+  },
+  "preprocessing": {
+    "imputation": "median",
+    "scaling": "StandardScaler",
+    "sequence_shape": [
+      11,
+      20
+    ],
+    "flattened_shape": [
+      1,
+      220
+    ]
+  },
+  "deployment": {
+    "model": "pics_stage5_logistic_int8.tflite",
+    "input_dtype": "int8",
+    "output_dtype": "int8",
+    "threshold": 0.5,
+    "output_mode": "risk_probability"
+  },
+  "status": "frozen edge specification"
+}
