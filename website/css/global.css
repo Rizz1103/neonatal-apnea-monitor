@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  /* Core surfaces */
+  --surface: #111417;
+  --surface-1: #181b1e;
+  --surface-2: #202428;
+  --surface-3: #282d32;
+  --surface-lowest: #0b0f11;
+
+  /* Borders / graticule */
+  --stroke: #2b323a;
+  --stroke-strong: #8e8d88;
+
+  /* Text */
+  --text-primary: #edece8;
+  --text-secondary: #c4c2bc;
+  --text-muted: #8e8d88;
+
+  /* Telemetry states */
+  --amber: #f39c12;
+  --amber-bright: #ffbe70;
+  --amber-dim: #e58e26;
+
+  --critical: #c0392b;
+  --critical-bright: #d9534f;
+
+  --physiological: #7c9890;
+  --physiological-dim: #5a7870;
+
+  --success: #7c9890;
+
+  /* Typography */
+  --font-ui: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing */
+  --space-1: 2px;
+  --space-2: 4px;
+  --space-3: 8px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* Layout */
+  --page-gutter: 24px;
+  --header-height: 56px;
+
+  /* Sharp instrumentation aesthetic */
+  --radius: 0px;
+}
+
+/* ---------- Reset ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--surface);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Typography ---------- */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ---------- App Shell ---------- */
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--surface);
+}
+
+.page {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--page-gutter) 48px;
+}
+
+/* ---------- Panels ---------- */
+
+.panel {
+  background: var(--surface-1);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+}
+
+.panel-header {
+  min-height: 40px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.panel-title {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ---------- Telemetry ---------- */
+
+.telemetry {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.telemetry-lg {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.telemetry-md {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.telemetry-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.telemetry-xs {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Status ---------- */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+  padding: 0 7px;
+  border: 1px solid var(--stroke);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.status-online {
+  color: var(--physiological);
+}
+
+.status-warning {
+  color: var(--amber);
+}
+
+.status-critical {
+  color: var(--critical-bright);
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--stroke);
+  border-radius: 0;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    background 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.button:hover {
+  background: var(--surface-3);
+  border-color: var(--stroke-strong);
+  color: var(--text-primary);
+}
+
+.button-active {
+  background: var(--surface-3);
+  border-color: var(--stroke-strong);
+  color: var(--text-primary);
+}
+
+.button-amber {
+  border-color: var(--amber-dim);
+  color: var(--amber-bright);
+}
+
+/* ---------- Utility ---------- */
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 {
+  gap: var(--space-1);
+}
+
+.gap-2 {
+  gap: var(--space-2);
+}
+
+.gap-3 {
+  gap: var(--space-3);
+}
+
+.gap-4 {
+  gap: var(--space-4);
+}
+
+.gap-5 {
+  gap: var(--space-5);
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  :root {
+    --page-gutter: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .page {
+    padding-top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 12px;
+  }
+}

@@ -1,0 +1,537 @@
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.system-header {
+  height: 56px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--stroke);
+  background: var(--surface-lowest);
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 1px solid var(--stroke-strong);
+}
+
+.brand-mark span {
+  display: block;
+  width: 2px;
+  background: var(--amber);
+}
+
+.brand-mark span:nth-child(1) {
+  height: 8px;
+}
+
+.brand-mark span:nth-child(2) {
+  height: 16px;
+}
+
+.brand-mark span:nth-child(3) {
+  height: 11px;
+}
+
+.brand-name {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.header-readout {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   OVERVIEW INTRO
+   ========================================================= */
+
+.overview-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 16px 0 32px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.eyebrow,
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.overview-intro h1 {
+  margin-top: 8px;
+}
+
+.intro-copy {
+  max-width: 680px;
+  margin-top: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.intro-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section-block {
+  padding-top: 32px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  margin-top: 4px;
+}
+
+.section-heading > .telemetry-xs {
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   ARCHITECTURE
+   ========================================================= */
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    24px
+    minmax(0, 1fr)
+    24px
+    minmax(0, 1fr)
+    24px
+    minmax(0, 1fr)
+    24px
+    minmax(0, 1fr);
+
+  align-items: stretch;
+}
+
+.architecture-card {
+  min-height: 245px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-1);
+  border: 1px solid var(--stroke);
+}
+
+.architecture-card-active {
+  border-color: var(--amber-dim);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 156, 18, 0.035),
+      transparent 70%
+    ),
+    var(--surface-1);
+}
+
+.architecture-index {
+  margin-bottom: 18px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 12px;
+  color: var(--text-muted);
+}
+
+.architecture-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.architecture-icon {
+  min-width: 42px;
+  height: 24px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--stroke);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.architecture-icon-amber {
+  border-color: var(--amber-dim);
+  color: var(--amber-bright);
+}
+
+.architecture-card h3 {
+  margin-bottom: 8px;
+}
+
+.architecture-card p {
+  min-height: 72px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.architecture-data {
+  margin-top: auto;
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  border-top: 1px solid var(--stroke);
+}
+
+.architecture-data div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.architecture-data span {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.architecture-data strong {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.architecture-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stroke-strong);
+  font-family: var(--font-mono);
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   SNAPSHOT METRICS
+   ========================================================= */
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--stroke);
+  border-left: 1px solid var(--stroke);
+}
+
+.metric-panel {
+  min-height: 130px;
+  padding: 16px;
+  background: var(--surface-1);
+  border-right: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.metric-panel-amber {
+  border-top: 2px solid var(--amber);
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 12px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-panel-amber .metric-value {
+  color: var(--amber-bright);
+}
+
+.metric-unit {
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.metric-detail {
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 12px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   STATUS TABLE
+   ========================================================= */
+
+.status-table {
+  border: 1px solid var(--stroke);
+  background: var(--surface-1);
+}
+
+.status-row {
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: 220px 130px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--stroke);
+}
+
+.status-row:last-child {
+  border-bottom: 0;
+}
+
+.status-row-header {
+  min-height: 32px;
+  background: var(--surface-lowest);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.status-row > span:first-child {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.status-row > span:last-child {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+
+/* =========================================================
+   SYSTEM NOTE
+   ========================================================= */
+
+.system-note {
+  margin-top: 32px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-top: 1px solid var(--stroke);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.system-note-marker {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  line-height: 12px;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+}
+
+.system-note p {
+  max-width: 900px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1250px) {
+  .system-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .architecture-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      24px
+      minmax(0, 1fr)
+      24px
+      minmax(0, 1fr);
+  }
+
+  .architecture-grid .architecture-card:nth-of-type(4),
+  .architecture-grid .architecture-card:nth-of-type(5) {
+    margin-top: 12px;
+  }
+
+  .architecture-arrow:nth-of-type(n + 6) {
+    display: none;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .system-header {
+    height: auto;
+    min-height: 56px;
+    padding: 10px 16px;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .header-readout {
+    display: none;
+  }
+
+  .overview-intro {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .intro-status {
+    align-items: flex-start;
+  }
+
+  .architecture-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .architecture-arrow {
+    display: none;
+  }
+
+  .architecture-card {
+    min-height: 210px;
+  }
+
+  .architecture-card p {
+    min-height: auto;
+  }
+
+  .status-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .status-row-header {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-name {
+    font-size: 10px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+  }
+
+  .monitor-button {
+    display: none;
+  }
+
+  .snapshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-block {
+    padding-top: 24px;
+  }
+
+  .system-note {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

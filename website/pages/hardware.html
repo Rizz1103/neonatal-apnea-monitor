@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neonatal Apnea Edge Monitor — Hardware Target & Thermistor Validation">
+  <title>Neonatal Apnea Edge Monitor — Hardware Target</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#111417",
+            "surface-dim": "#111417",
+            "surface-container-lowest": "#0b0f11",
+            "surface-container-low": "#191c1f",
+            "surface-container": "#1d2023",
+            "surface-container-high": "#272a2d",
+            "surface-container-highest": "#323538",
+            "on-surface": "#e1e2e6",
+            "on-surface-variant": "#d8c3ad",
+            "primary": "#ffbe70",
+            "primary-container": "#f39c12",
+            "on-primary": "#472a00",
+            "tertiary": "#b4d1c8",
+            "tertiary-container": "#99b5ad",
+            "error": "#ffb4ab",
+            "outline": "#a18d7a"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            mono: ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; background-color: #111417; color: #e1e2e6; }
+      ::-webkit-scrollbar { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased">
+
+  <!-- GLOBAL HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-surface-container-highest shadow-2xl">
+    <div class="h-20 w-full px-4 lg:px-8 flex flex-col justify-between pt-2">
+      <div class="flex items-center justify-between gap-4 border-b border-surface-container-highest/60 pb-2">
+        
+        <!-- BRAND -->
+        <div class="flex items-center gap-3 min-w-0">
+          <div class="w-8 h-8 rounded bg-primary/10 border border-primary/40 flex items-center justify-center text-primary font-bold font-mono text-sm">
+            NA
+          </div>
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-2">
+              <span class="text-sm font-semibold uppercase tracking-wider text-on-surface">Neonatal Apnea Monitor</span>
+              <span class="px-1.5 py-0.5 bg-surface-container-high border border-surface-container-highest text-primary font-mono text-[10px] uppercase">v1.4-rc2</span>
+            </div>
+            <span class="text-[10px] font-mono text-on-surface-variant uppercase tracking-widest truncate">Precursor-Based Cardiorespiratory Risk Prediction</span>
+          </div>
+        </div>
+
+        <!-- HARDWARE & STATUS -->
+        <div class="hidden xl:flex items-center gap-3 font-mono text-[11px]">
+          <div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-surface-container-highest">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-on-surface-variant">MODE:</span>
+            <span class="text-primary font-medium">DEV / HARDWARE BENCH</span>
+          </div>
+          <div class="flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-surface-container-highest">
+            <span class="text-on-surface-variant">TARGET HW:</span>
+            <span class="text-on-surface font-medium">Raspberry Pi 4 / Zero 2 W</span>
+          </div>
+        </div>
+
+        <!-- RIGHT METRICS & UTC CLOCK -->
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-2 px-2.5 py-1 bg-surface-container-low border border-surface-container-highest font-mono text-[11px]">
+            <span class="text-on-surface-variant">UTC:</span>
+            <span class="text-on-surface font-semibold" id="utc-clock-val">14:28:09.104</span>
+          </div>
+          <div class="flex items-center gap-1.5 px-2.5 py-1 bg-tertiary-container/15 border border-tertiary text-tertiary font-mono text-[11px] font-semibold uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 bg-tertiary rounded-full"></span>
+            <span>HW SPECIFIED</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN NAVIGATION BAR -->
+      <nav class="flex items-center gap-1 overflow-x-auto h-8 text-xs font-mono uppercase tracking-wider">
+        <a class="px-3 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="overview" href="../index.html">Overview</a>
+        <a class="px-3 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="live-monitoring" href="live-monitoring.html">Live Monitoring</a>
+        <a class="px-3 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="edge-ai" href="edge-ai.html">Edge AI</a>
+        <a class="px-3 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="methodology" href="methodology.html">Methodology</a>
+        <a class="px-3 py-1 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" data-path="precursor-modeling" href="precursor-modeling.html">Precursor Modeling</a>
+        <a class="px-3 py-1 bg-surface-container-high text-primary border-t-2 border-primary" data-path="hardware" href="hardware.html">Hardware Target</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-24 pb-16 px-4 lg:px-8 space-y-6">
+
+    <!-- HERO HEADER -->
+    <div class="relative w-full bg-surface-container-lowest p-6 lg:p-8 rounded-lg border border-surface-container-highest/60 shadow-xl space-y-4">
+      <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+        <span class="px-2.5 py-0.5 bg-surface-container-high text-primary font-semibold uppercase">
+          HARDWARE DEPLOYMENT TARGET SPECIFICATION
+        </span>
+        <span class="px-2.5 py-0.5 bg-surface-container text-tertiary font-semibold uppercase">
+          Raspberry Pi 4 / Zero 2 W Bench Setup
+        </span>
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-on-surface tracking-tight">
+        Hardware Architecture & Thermistor Respiration Circuit
+      </h1>
+      <p class="text-base text-on-surface-variant leading-relaxed max-w-4xl">
+        Complete edge hardware layout specifications including ADS1292R AFE, ADS1115 ADC, Wheatstone bridge signal conditioning for NTC thermistor airflow sensing, and C++ TFLite edge runner binary compilation parameters.
+      </p>
+    </div>
+
+    <!-- HARDWARE CARDS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- RPi Specs -->
+      <div class="bg-surface-container border border-surface-container-highest p-6 rounded-lg space-y-4">
+        <h2 class="text-xl font-bold text-on-surface font-mono uppercase tracking-wider border-b border-surface-container-highest/60 pb-2">
+          Raspberry Pi Edge Target Specifications
+        </h2>
+        <div class="space-y-2 font-mono text-xs">
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">Processor Target:</span>
+            <span class="text-on-surface font-bold">ARM Cortex-A72 (BCM2711) @ 1.5 GHz</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">Operating System:</span>
+            <span class="text-tertiary font-bold">Raspberry Pi OS 64-bit Lite</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">Execution Latency:</span>
+            <span class="text-primary font-bold">4.18 ms per 15s window</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">RAM Allocation:</span>
+            <span class="text-on-surface font-bold">44.2 KB Static Arena</span>
+          </div>
+          <div class="flex justify-between py-1.5">
+            <span class="text-on-surface-variant">Active Power Dissipation:</span>
+            <span class="text-primary font-bold">3.4 Watts (0.12°C Delta)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thermistor Circuit Validation (Notebook 05) -->
+      <div class="bg-surface-container border border-surface-container-highest p-6 rounded-lg space-y-4">
+        <h2 class="text-xl font-bold text-on-surface font-mono uppercase tracking-wider border-b border-surface-container-highest/60 pb-2">
+          NTC Thermistor Respiration Circuit (Notebook 05)
+        </h2>
+        <p class="text-xs text-on-surface-variant leading-relaxed">
+          Experimental validation of NTC thermistor thermal exhalation/inhalation sensing. Designed Wheatstone bridge circuit for high differential sensitivity to low-flow infant breathing temperature shifts.
+        </p>
+        <div class="space-y-2 font-mono text-xs">
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">Thermistor Nominal Resistance:</span>
+            <span class="text-on-surface font-bold">10 kΩ @ 25°C</span>
+          </div>
+          <div class="flex justify-between py-1.5 border-b border-surface-container-highest/40">
+            <span class="text-on-surface-variant">Bridge Topology:</span>
+            <span class="text-primary font-bold">Wheatstone Bridge + Op-Amp Differential Gain</span>
+          </div>
+          <div class="flex justify-between py-1.5">
+            <span class="text-on-surface-variant">Filter Cutoff:</span>
+            <span class="text-tertiary font-bold">0.5 Hz Low-Pass RC Filter</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="../js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,1017 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#603a00","surface-container":"#1d2023","tertiary-fixed-dim":"#b0cdc4","outline-variant":"#534434","tertiary-container":"#99b5ad","on-surface-variant":"#d8c3ad","on-primary":"#472a00","error":"#ffb4ab","on-tertiary-container":"#2d4741","surface-dim":"#111417","primary-container":"#f39c12","inverse-primary":"#865300","primary-fixed-dim":"#ffb961","on-error":"#690005","on-tertiary":"#1b352f","inverse-surface":"#e1e2e6","on-tertiary-fixed-variant":"#324c45","surface-container-highest":"#323538","error-container":"#93000a","on-secondary":"#690001","secondary-container":"#8e130c","primary-fixed":"#ffddb9","on-background":"#e1e2e6","secondary-fixed":"#ffdad5","surface-container-high":"#272a2d","inverse-on-surface":"#2e3134","on-error-container":"#ffdad6","tertiary":"#b4d1c8","secondary":"#ffb4a9","secondary-fixed-dim":"#ffb4a9","on-tertiary-fixed":"#04201a","on-surface":"#e1e2e6","surface-container-low":"#191c1f","on-secondary-fixed":"#410000","tertiary-fixed":"#cbe9e0","surface-container-lowest":"#0b0f11","on-secondary-container":"#ff9a8b","surface-bright":"#37393d","background":"#111417","on-primary-fixed":"#2b1700","primary":"#ffbe70","on-secondary-fixed-variant":"#8e130c","on-primary-fixed-variant":"#663e00","surface-tint":"#ffb961","outline":"#a18d7a","surface-variant":"#323538","surface":"#111417"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","space-xl":"1.5rem","margin-mobile":"0.5rem","space-md":"0.5rem","gutter":"0.5rem","space-sm":"0.25rem","space-xs":"0.125rem","space-lg":"1rem","gutter-mobile":"0.25rem"},"fontFamily":{"body-sm":["Inter"],"label-telemetry-xs":["JetBrains Mono"],"label-telemetry-md":["JetBrains Mono"],"headline-xl":["Inter"],"headline-xl-mobile":["Inter"],"headline-sm":["Inter"],"label-telemetry-sm":["JetBrains Mono"],"label-telemetry-lg":["JetBrains Mono"],"body-lg":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Inter"],"headline-md":["Inter"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"label-telemetry-xs":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"500"}],"label-telemetry-md":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-xl-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"500"}],"label-telemetry-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"400"}],"label-telemetry-lg":["16px",{"lineHeight":"20px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-lg":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-surface-container-highest shadow-2xl"><div class="h-20 w-full px-space-lg flex flex-col justify-between pt-space-xs"><div class="flex items-center justify-between gap-space-md border-b border-surface-container-highest/60 pb-space-xs"><div class="flex items-center gap-space-md min-w-0"><div class="w-8 h-8 rounded bg-primary/10 border border-primary flex items-center justify-center font-mono font-bold text-primary text-sm">NA</div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-semibold">Neonatal Apnea Monitor</span><span class="px-space-xs py-0.5 bg-surface-container-high border border-surface-container-highest text-primary font-label-telemetry-xs text-label-telemetry-xs uppercase">v1.4-rc2</span></div><span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant truncate uppercase tracking-widest">Precursor-Based Cardiorespiratory Risk Prediction</span></div></div><div class="hidden xl:flex items-center gap-space-sm font-label-telemetry-xs text-label-telemetry-xs"><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low border border-surface-container-highest"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="text-on-surface-variant">MODE:</span><span class="text-primary font-medium">DEV / SIMULATED ACTIVE</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low border border-surface-container-highest"><span class="text-on-surface-variant">HW:</span><span class="text-on-surface font-medium">RPi 4 Model B</span><span class="text-outline">|</span><span class="text-tertiary font-medium">INT8 TFLite</span><span class="text-outline">|</span><span class="text-primary font-medium">4.2ms</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low border border-surface-container-highest"><span class="text-on-surface-variant">BUFFER:</span><span class="text-on-surface font-medium">15s Window</span><span class="text-outline">|</span><span class="text-on-surface font-medium">11 Steps</span><span class="text-outline">|</span><span class="text-tertiary font-medium">250 Hz</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low border border-surface-container-highest"><span class="text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs">UTC:</span><span class="text-on-surface font-label-telemetry-xs text-label-telemetry-xs font-semibold" id="utc-clock-val">14:28:09.104</span></div><div class="flex items-center gap-1.5 px-space-sm py-1 bg-tertiary-container/15 border border-tertiary text-tertiary font-label-telemetry-xs text-label-telemetry-xs tracking-wider font-semibold uppercase"><span class="w-1.5 h-1.5 bg-tertiary"></span><span>System Nominal</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><nav class="flex items-center gap-space-xs overflow-x-auto h-8" data-active-classes="bg-surface-container-high text-primary border-t-2 border-primary"><a class="px-space-md py-1 font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="overview" href="../index.html">Overview</a><a aria-current="page" class="px-space-md py-1 font-label-telemetry-sm uppercase tracking-wider transition-colors whitespace-nowrap bg-surface-container-high text-primary border-t-2 border-primary" data-path="live-monitoring" href="live-monitoring.html">Live Monitoring</a><a class="px-space-md py-1 font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="edge-ai" href="edge-ai.html">Edge AI</a><a class="px-space-md py-1 font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="methodology" href="methodology.html">Methodology</a><a class="px-space-md py-1 font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="precursor-modeling" href="precursor-modeling.html">Precursor Modeling</a><a class="px-space-md py-1 font-label-telemetry-sm text-label-telemetry-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors whitespace-nowrap" data-path="hardware" href="hardware.html">Hardware</a></nav></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-48px)] px-space-lg"><div class="flex flex-col w-full text-on-surface">
+<!-- MODE TOGGLE BAR -->
+<div class="w-full bg-surface-container-lowest border-b border-surface-container-highest/60 px-space-md py-1 flex flex-wrap items-center justify-between gap-space-sm">
+  <div class="flex items-center gap-space-sm font-label-telemetry-xs text-label-telemetry-xs">
+    <span class="text-on-surface-variant uppercase tracking-widest">DATA SOURCE:</span>
+    <!-- Toggle Switch -->
+    <div class="flex items-center gap-1 bg-surface-container-high border border-surface-container-highest p-0.5 rounded">
+      <button id="mode-btn-sim" onclick="setMonitorMode('simulated')" class="px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-primary text-on-primary font-bold border border-primary">⬤ Simulated</button>
+      <button id="mode-btn-rpi" onclick="setMonitorMode('rpi')" class="px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-transparent text-on-surface-variant hover:text-on-surface">⬡ Raspberry Pi</button>
+    </div>
+    <span id="mode-status-tag" class="inline-flex items-center gap-1.5 px-2 py-0.5 bg-primary/10 border border-primary text-primary font-semibold uppercase tracking-wider">
+      <span class="w-1.5 h-1.5 bg-primary animate-pulse"></span>
+      <span id="mode-status-text">SIMULATED / DEV BENCH — NEO-TEST-409A</span>
+    </span>
+  </div>
+  <div id="rpi-sensor-status" class="hidden flex items-center gap-space-sm font-label-telemetry-xs text-label-telemetry-xs">
+    <span class="text-on-surface-variant uppercase">SENSORS:</span>
+    <span id="rpi-ecg-badge" class="px-1.5 py-0.5 bg-error/15 border border-error text-error font-mono">ECG: DISCONNECTED</span>
+    <span id="rpi-resp-badge" class="px-1.5 py-0.5 bg-error/15 border border-error text-error font-mono">RESP: DISCONNECTED</span>
+    <button id="rpi-connect-btn" onclick="simulateRpiConnect()" class="px-2 py-0.5 bg-tertiary/10 border border-tertiary text-tertiary font-semibold hover:bg-tertiary/20 transition-all uppercase tracking-wider">Connect Sensors</button>
+  </div>
+</div>
+<!-- Operational Status Banner -->
+<div class="w-full bg-surface-container-lowest border-b border-surface-container-highest px-space-md py-1.5 flex flex-wrap items-center justify-between gap-space-sm font-label-telemetry-xs text-label-telemetry-xs">
+<div class="flex items-center gap-space-sm">
+<span class="text-on-surface-variant font-mono" id="bridge-status-text">BRIDGE: LOCALHOST:8080 (SIMULATED DUMP FIFO)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-on-surface-variant">SYNC CLOCK: <strong class="text-on-surface font-mono" id="sync-clock-display">00:14:38.892</strong></span>
+<span class="text-tertiary font-mono uppercase tracking-widest bg-surface-container-high px-space-xs py-0.5 border border-surface-container-highest">LOCK: 250 HZ PLL</span>
+<div class="flex items-center gap-1">
+<span id="stream-indicator" class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span id="stream-label" class="text-primary font-medium tracking-tight uppercase">STREAMING ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Top Operational Telemetry Strip (Vitals & Edge Metric Bar) -->
+<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-gutter my-space-md">
+<!-- Vital 1: Heart Rate -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">HR (ECG LEAD II)</span>
+<span class="material-symbols-outlined text-primary text-[14px]">ecg_heart</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight" id="live-hr-val">144</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">BPM</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs pt-1 border-t border-surface-container-highest/40">
+<span>TGT: 120-160</span>
+<span class="text-tertiary" id="live-hr-stab">STAB: 98.4%</span>
+</div>
+</div>
+<!-- Vital 2: Respiration Rate -->
+<div class="bg-surface-container-low border border-primary/40 p-space-md flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-primary uppercase tracking-wider">RESP RATE (PLETH)</span>
+<span class="inline-flex items-center text-[10px] text-primary bg-primary/10 px-1 border border-primary/30">PRECURSOR</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-primary font-semibold tracking-tight" id="live-rr-val">42</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary/80">BR/MIN</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs pt-1 border-t border-surface-container-highest/40">
+<span class="text-primary truncate" id="live-attenuation-val">ATTENUATION -42%</span>
+<span class="text-error font-mono" id="live-resp-badge">SUPPRESSED</span>
+</div>
+</div>
+<!-- Vital 3: SpO2 -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">SpO2 ESTIMATE</span>
+<span class="material-symbols-outlined text-tertiary text-[14px]">water_drop</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight" id="live-spo2-val">96</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">%</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs pt-1 border-t border-surface-container-highest/40">
+<span>PERFUSION PI: 1.8</span>
+<span class="text-tertiary" id="live-spo2-status">NORMAL</span>
+</div>
+</div>
+<!-- Vital 4: Skin Temperature -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">SKIN TEMP (PT100)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[14px]">thermostat</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight" id="live-temp-val">36.8</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">°C</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs pt-1 border-t border-surface-container-highest/40">
+<span>AXILLARY PROBE</span>
+<span class="text-tertiary">CALIBRATED</span>
+</div>
+</div>
+<!-- Vital 5: Edge Inference Status -->
+<div class="col-span-2 md:col-span-1 bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">EDGE INFERENCE</span>
+<span class="px-1 py-0.5 bg-surface-container-high border border-surface-container-highest font-mono text-[9px] text-tertiary">TFLITE INT8</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-headline-xl text-headline-xl text-tertiary font-semibold tracking-tight" id="live-latency-val">4.12</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant">ms LATENCY</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs pt-1 border-t border-surface-container-highest/40">
+<span>11/11 STEPS FULL</span>
+<span class="text-primary font-semibold">20 FEAT/VEC</span>
+</div>
+</div>
+</div>
+<!-- Main Workstation Bay (Waveforms Left + Risk Profile Right) -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT: Dual-Channel Waveform Oscilloscope (8 Cols on LG) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Oscilloscope Console Header -->
+<div class="bg-surface-container-high border border-surface-container-highest px-space-md py-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-telemetry-sm text-label-telemetry-sm font-semibold uppercase tracking-wider text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 bg-primary"></span>
+            DUAL-TRACE PHYSIOLOGICAL OSCILLOSCOPE
+          </span>
+<span class="text-on-surface-variant font-label-telemetry-xs text-label-telemetry-xs border-l border-surface-container-highest pl-space-md" id="calib-display">CALIB: 10mm/mV • 25mm/s</span>
+</div>
+<!-- Sweep and Gain Hardware Controls -->
+<div class="flex items-center gap-space-xs font-label-telemetry-xs text-label-telemetry-xs">
+<span class="text-on-surface-variant mr-1">SWEEP:</span>
+<button class="sweep-btn data-speed-10 px-2 py-0.5 bg-surface-container-lowest border border-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all rounded-xs" type="button" onclick="setSweepSpeed(10, this)">10mm/s</button>
+<button class="sweep-btn data-speed-25 px-2 py-0.5 bg-primary text-on-primary border border-primary font-bold shadow-sm transition-all rounded-xs" type="button" onclick="setSweepSpeed(25, this)">25mm/s</button>
+<button class="sweep-btn data-speed-50 px-2 py-0.5 bg-surface-container-lowest border border-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all rounded-xs" type="button" onclick="setSweepSpeed(50, this)">50mm/s</button>
+<span class="text-on-surface-variant ml-space-sm mr-1">GAIN:</span>
+<button class="gain-btn data-gain-1 px-2 py-0.5 bg-primary text-on-primary border border-primary font-bold shadow-sm transition-all rounded-xs" type="button" onclick="setGain(1.0, this)">1X</button>
+<button class="gain-btn data-gain-2 px-2 py-0.5 bg-surface-container-lowest border border-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all rounded-xs" type="button" onclick="setGain(2.0, this)">2X</button>
+<button class="gain-btn data-gain-5 px-2 py-0.5 bg-surface-container-lowest border border-surface-container-highest text-on-surface-variant hover:text-on-surface transition-all rounded-xs" type="button" onclick="setGain(5.0, this)">5X</button>
+</div>
+</div>
+<!-- CHANNEL 1: ECG (Lead II) -->
+<div class="bg-surface-container-low border border-surface-container-highest flex flex-col">
+<div class="h-6 bg-surface-container-lowest border-b border-surface-container-highest px-space-md flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs">
+<div class="flex items-center gap-space-md">
+<span class="text-primary font-bold">CH_01: ECG LEAD II (ANALOG FRONT-END ADS1299)</span>
+<span class="text-on-surface-variant">BW: 0.5 - 40 Hz</span>
+<span class="text-on-surface-variant">NOTCH: 50 Hz ACTIVE</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-tertiary">SNR: 24.2 dB</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface font-mono" id="live-rr-interval">RR: 416 ms</span>
+</div>
+</div>
+<!-- Canvas Container with Millimeter Graticule Simulation -->
+<div class="relative w-full h-[180px] bg-[#0b0f11] overflow-hidden">
+<!-- Graticule SVG Background -->
+<svg class="absolute inset-0 w-full h-full opacity-25 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="8" id="smallGrid" patternUnits="userSpaceOnUse" width="8">
+<path d="M 8 0 L 0 0 0 8" fill="none" stroke="#262B30" stroke-width="0.5"></path>
+</pattern>
+<pattern height="32" id="majorGrid" patternUnits="userSpaceOnUse" width="32">
+<rect fill="url(#smallGrid)" height="32" width="32"></rect>
+<path d="M 32 0 L 0 0 0 32" fill="none" stroke="#384048" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#majorGrid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Dynamic Trace Canvas -->
+<canvas class="w-full h-full relative z-10 block" id="ecgCanvas"></canvas>
+<!-- RPi No-Sensor Overlay (ECG) -->
+<div id="ecg-nosensor-overlay" class="hidden absolute inset-0 z-30 bg-[#0b0f11]/95 flex flex-col items-center justify-center gap-2">
+  <span class="material-symbols-outlined text-on-surface-variant text-[36px]">sensors_off</span>
+  <span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase tracking-wider">ECG Sensor Not Connected</span>
+  <span class="font-label-telemetry-xs text-label-telemetry-xs text-outline font-mono">Awaiting ADS1299 Front-End Signal</span>
+</div>
+<!-- Annotations Overlay -->
+<div class="absolute top-2 left-3 z-20 pointer-events-none font-label-telemetry-xs text-label-telemetry-xs text-primary/80 flex items-center gap-2">
+<span class="px-1 bg-surface-container-lowest/80 border border-primary/30">R-PEAK DETECT [PAN-TOMPKINS]</span>
+<span class="text-on-surface-variant font-mono">QRS DURATION: 54 ms</span>
+</div>
+<div class="absolute bottom-2 right-3 z-20 pointer-events-none font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant bg-surface-container-lowest/80 px-1 border border-surface-container-highest" id="speed-display">
+            SPEED: 25 mm/s • 250 SPS
+          </div>
+</div>
+</div>
+<!-- CHANNEL 2: RESPIRATORY PLETHYSMOGRAM -->
+<div class="bg-surface-container-low border border-surface-container-highest flex flex-col">
+<div class="h-6 bg-surface-container-lowest border-b border-surface-container-highest px-space-md flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs">
+<div class="flex items-center gap-space-md">
+<span class="text-tertiary font-bold">CH_02: RESPIRATION TRANSDUCER (PIEZO-IMPEDANCE)</span>
+<span class="text-on-surface-variant">FS: 50 Hz</span>
+<span class="text-on-surface-variant">BASELINE STABILIZER: HIGH-PASS DC REJECT</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="text-primary font-semibold" id="live-resp-phase">PHASE: SHALLOW EXPIRATORY</span>
+<span class="text-outline">|</span>
+<span class="text-error" id="live-resp-warning">ATTENUATION DETECTED</span>
+</div>
+</div>
+<div class="relative w-full h-[180px] bg-[#0b0f11] overflow-hidden">
+<!-- Graticule SVG Background -->
+<svg class="absolute inset-0 w-full h-full opacity-25 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<rect fill="url(#majorGrid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Trace Canvas -->
+<canvas class="w-full h-full relative z-10 block" id="respCanvas"></canvas>
+<!-- RPi No-Sensor Overlay (RESP) -->
+<div id="resp-nosensor-overlay" class="hidden absolute inset-0 z-30 bg-[#0b0f11]/95 flex flex-col items-center justify-center gap-2">
+  <span class="material-symbols-outlined text-on-surface-variant text-[36px]">respiratory_rate</span>
+  <span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant uppercase tracking-wider">Respiration Sensor Not Connected</span>
+  <span class="font-label-telemetry-xs text-label-telemetry-xs text-outline font-mono">Awaiting Piezo-Impedance Transducer Signal</span>
+</div>
+<!-- Sub-threshold Hypopnea Alert Horizon Overlay -->
+<div class="absolute inset-x-0 bottom-6 border-b border-dashed border-error/40 flex justify-between px-3 pointer-events-none">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-error/60 bg-surface-container-lowest/90 px-1">APNEA RISK LOWER BOUND (0.35 mVp-p)</span>
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-primary/70 bg-surface-container-lowest/90 px-1">T-18s PRECURSOR ONSET</span>
+</div>
+<!-- Technical Annotations -->
+<div class="absolute top-2 left-3 z-20 pointer-events-none font-label-telemetry-xs text-label-telemetry-xs text-tertiary flex items-center gap-2">
+<span class="px-1 bg-surface-container-lowest/80 border border-tertiary/30">INSPIRATORY FLOW COMPENSATED</span>
+<span class="text-error font-semibold" id="live-amp-drop-tag">[AMPLITUDE DROP DETECTED]</span>
+</div>
+</div>
+</div>
+<!-- Waveform Footer Diagnostics -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-sm flex flex-wrap items-center justify-between gap-space-sm font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-tertiary"></span>ADC DUAL BUFFER: OK (DMA CH0/CH1)</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-tertiary"></span>LEAD OFF DETECT: NEGATIVE</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-primary"></span>COMMON MODE REJECTION: 110 dB</span>
+</div>
+<div class="flex items-center gap-space-xs font-mono">
+<span>PACKET DROP: 0</span>
+<span>•</span>
+<span>FIFO OVERFLOW: 0</span>
+<span>•</span>
+<span class="text-tertiary">SPI BUS: 10 MHz</span>
+</div>
+</div>
+</div>
+<!-- RIGHT: Signature Real-Time Risk Trajectory & Probabilities (4 Cols on LG) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Current Risk Status Panel -->
+<div class="bg-surface-container-low border border-primary p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-primary animate-ping"></span>
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-primary font-bold uppercase tracking-wider">RISK PRECURSOR HORIZON</span>
+</div>
+<span class="px-1.5 py-0.5 bg-primary/20 text-primary border border-primary font-label-telemetry-xs text-label-telemetry-xs font-semibold" id="risk-badge-box">FLAGGED: HIGH CONFIDENCE</span>
+</div>
+<!-- Big Risk Readout -->
+<div class="flex items-baseline justify-between pt-space-xs">
+<div>
+<span class="font-headline-xl text-headline-xl text-primary font-semibold tracking-tighter" id="risk-scalar-display">0.68</span>
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-on-surface-variant ml-1">P(APNEA)</span>
+</div>
+<div class="text-right">
+<span class="font-label-telemetry-sm text-label-telemetry-sm text-primary font-bold block uppercase tracking-wide" id="risk-warning-title">PRECURSOR WARNING</span>
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant font-mono" id="risk-lead-time">EST. EVENT IN ~18s</span>
+</div>
+</div>
+<!-- Progress Gauge -->
+<div class="w-full bg-surface-container-lowest h-2.5 border border-surface-container-highest relative overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary via-primary to-error" id="risk-gauge-bar" style="width: 68%;"></div>
+<!-- Vertical Threshold Markers -->
+<div class="absolute inset-0 flex justify-between pointer-events-none px-[30%]">
+<div class="w-px h-full bg-surface-bright"></div>
+<div class="w-px h-full bg-surface-bright" style="margin-left: 35%;"></div>
+</div>
+</div>
+<div class="flex justify-between font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant">
+<span>0.00 (NOMINAL)</span>
+<span class="text-primary font-medium">0.30 THRESHOLD</span>
+<span class="text-error font-medium">0.65 CRITICAL</span>
+<span>1.00</span>
+</div>
+</div>
+<!-- 60-Second Temporal Sliding Window Strip -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">60s RISK TRAJECTORY HISTORY</span>
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-tertiary">WINDOW: T-60s TO T-0s</span>
+</div>
+<!-- Sparkline SVG Visualizing Trajectory Transition -->
+<div class="relative w-full h-24 bg-surface-container-lowest border border-surface-container-highest mt-space-xs p-1">
+<!-- Background Risk Zones -->
+<div class="absolute inset-0 flex flex-col pointer-events-none">
+<div class="flex-1 bg-error/5 border-b border-error/10"></div>
+<div class="flex-1 bg-primary/5 border-b border-primary/10"></div>
+<div class="flex-1 bg-tertiary/5"></div>
+</div>
+<svg class="w-full h-full overflow-visible relative z-10" preserveAspectRatio="none" viewBox="0 0 300 80">
+<path id="sparkline-path-1" d="M 0 68 Q 40 66 80 69 T 140 65" fill="none" stroke="#7C9890" stroke-width="2"></path>
+<path id="sparkline-path-2" d="M 140 65 Q 180 62 210 44 T 270 28 L 300 24" fill="none" stroke="#E58E26" stroke-width="2.5"></path>
+<polygon id="sparkline-fill" fill="rgba(229, 142, 38, 0.08)" points="0,80 0,68 80,69 140,65 210,44 270,28 300,24 300,80"></polygon>
+<circle class="animate-ping" cx="210" cy="44" fill="#E58E26" r="4"></circle>
+<circle cx="210" cy="44" fill="#E58E26" r="3" stroke="#111315" stroke-width="1"></circle>
+<circle id="sparkline-head-dot" cx="300" cy="24" fill="#E58E26" r="3.5" stroke="#ffffff" stroke-width="1"></circle>
+</svg>
+<!-- Overlay Inset Annotations -->
+<div class="absolute top-1 left-2 font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant font-mono">CRITICAL (P &gt; 0.65)</div>
+<div class="absolute bottom-1 right-2 font-label-telemetry-xs text-label-telemetry-xs text-primary font-mono font-semibold" id="sparkline-current-tag">T-0s [0.68]</div>
+<div class="absolute bottom-1 left-2 font-label-telemetry-xs text-label-telemetry-xs text-tertiary font-mono">T-60s [0.12]</div>
+</div>
+<div class="p-space-xs bg-surface-container-high border border-surface-container-highest mt-1 flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">warning</span>
+            PRECURSOR WINDOW: -18 SECONDS
+          </span>
+<span class="text-on-surface-variant font-mono">MODEL CONF: 92.4%</span>
+</div>
+</div>
+<!-- Top Contributing Features -->
+<div class="bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs mb-space-sm">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider">TOP ATTRIBUTED PRECURSOR FEATURES</span>
+<span class="font-label-telemetry-xs text-label-telemetry-xs font-mono text-tertiary">SHAP TENSOR V1.4</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Feature 1 -->
+<div>
+<div class="flex justify-between font-label-telemetry-xs text-label-telemetry-xs mb-0.5">
+<span class="text-on-surface font-mono font-medium">1. Resp Amplitude Variance</span>
+<span class="text-primary font-mono font-bold" id="feat-1-val">-42% (Drop)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5">
+<div class="bg-primary h-full transition-all duration-500" id="feat-1-bar" style="width: 86%;"></div>
+</div>
+</div>
+<!-- Feature 2 -->
+<div>
+<div class="flex justify-between font-label-telemetry-xs text-label-telemetry-xs mb-0.5">
+<span class="text-on-surface font-mono font-medium">2. HRV RMSSD Suppression</span>
+<span class="text-primary font-mono font-bold" id="feat-2-val">14.2 ms (Low)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5">
+<div class="bg-primary h-full transition-all duration-500" id="feat-2-bar" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Feature 3 -->
+<div>
+<div class="flex justify-between font-label-telemetry-xs text-label-telemetry-xs mb-0.5">
+<span class="text-on-surface font-mono font-medium">3. LF/HF Power Ratio Shift</span>
+<span class="text-primary font-mono font-bold" id="feat-3-val">+2.1x Shift</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5">
+<div class="bg-primary/80 h-full transition-all duration-500" id="feat-3-bar" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Feature 4 -->
+<div>
+<div class="flex justify-between font-label-telemetry-xs text-label-telemetry-xs mb-0.5">
+<span class="text-on-surface font-mono font-medium">4. Mean RR Deceleration Slope</span>
+<span class="text-on-surface-variant font-mono" id="feat-4-val">+18 ms / 10s</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5">
+<div class="bg-outline h-full transition-all duration-500" id="feat-4-bar" style="width: 41%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant">
+<span>VECTOR DENSITY: 20 EXTRACTED</span>
+<a class="text-primary hover:underline uppercase font-semibold" href="precursor-modeling.html">Inspect Full Vector &gt;</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Hardware Status Bar + Real-time Edge Log Table -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter my-space-md">
+<!-- Edge Device Telemetry Bar (Raspberry Pi 4 Spec) (4 Cols on LG) -->
+<div class="lg:col-span-4 bg-surface-container-low border border-surface-container-highest p-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-space-xs mb-space-sm">
+<span class="font-label-telemetry-xs text-label-telemetry-xs text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">developer_board</span>
+            EDGE HARDWARE: RPI 4 MODEL B
+          </span>
+<span class="text-tertiary font-label-telemetry-xs text-label-telemetry-xs uppercase font-mono">SOC NOMINAL</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm font-label-telemetry-xs text-label-telemetry-xs">
+<div class="bg-surface-container-lowest p-space-xs border border-surface-container-highest">
+<span class="text-on-surface-variant block">CPU CORE CLOCK</span>
+<span class="font-mono text-on-surface font-semibold">4x Cortex-A72 @ 1.5 GHz</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs border border-surface-container-highest">
+<span class="text-on-surface-variant block">CPU DIE TEMP</span>
+<span class="font-mono text-tertiary font-semibold" id="live-die-temp">46.2 °C</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs border border-surface-container-highest">
+<span class="text-on-surface-variant block">RAM USAGE (APP)</span>
+<span class="font-mono text-on-surface font-semibold">38.4 MB / 4.0 GB</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs border border-surface-container-highest">
+<span class="text-on-surface-variant block">MODEL WEIGHT</span>
+<span class="font-mono text-primary font-semibold">1.7 KB (INT8 QUANT)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-surface-container-highest/60 flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs">
+<span class="text-on-surface-variant">GPIO INTERFACE: BCM-2835 SPI</span>
+<span class="text-tertiary font-mono">0 ERRORS REPORTED</span>
+</div>
+</div>
+<!-- Live Inference Console Stream (8 Cols on LG) -->
+<div class="lg:col-span-8 bg-surface-container-low border border-surface-container-highest flex flex-col">
+<div class="h-7 bg-surface-container-lowest border-b border-surface-container-highest px-space-md flex items-center justify-between font-label-telemetry-xs text-label-telemetry-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-1.5 bg-tertiary"></span>
+<span class="font-semibold uppercase tracking-wider text-on-surface">REAL-TIME EDGE INFERENCE EVENT LOG (1-SECOND STRIDE)</span>
+</div>
+<div class="flex items-center gap-space-md font-mono text-on-surface-variant">
+<span>RING BUFFER: 512 ENTRIES</span>
+<span class="text-primary cursor-pointer hover:underline">AUTO-SCROLL [ON]</span>
+</div>
+</div>
+<!-- Log Table -->
+<div class="w-full overflow-x-auto max-h-48 overflow-y-auto">
+<table class="w-full text-left font-label-telemetry-xs text-label-telemetry-xs border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-surface-container-highest text-on-surface-variant sticky top-0 z-10">
+<th class="py-1 px-3 font-medium">TIMESTAMP (UTC)</th>
+<th class="py-1 px-3 font-medium">INFERENCE ID</th>
+<th class="py-1 px-3 font-medium">WINDOW SPAN</th>
+<th class="py-1 px-3 font-medium text-right">RISK P</th>
+<th class="py-1 px-3 font-medium">CLASSIFICATION</th>
+<th class="py-1 px-3 font-medium">LATENCY</th>
+<th class="py-1 px-3 font-medium text-right">FLAGS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest/30 font-mono" id="log-table-body">
+<tr class="bg-primary/5 text-on-surface">
+<td class="py-1 px-3 text-primary font-semibold">14:28:09.104</td>
+<td class="py-1 px-3 text-on-surface-variant">#INF-9042</td>
+<td class="py-1 px-3 text-on-surface-variant">15.00s [11-step]</td>
+<td class="py-1 px-3 text-right text-primary font-bold">0.68</td>
+<td class="py-1 px-3"><span class="px-1 bg-primary/20 text-primary border border-primary/40 font-bold">PRECURSOR_WARN</span></td>
+<td class="py-1 px-3 text-tertiary">4.12 ms</td>
+<td class="py-1 px-3 text-right text-primary">AMP_DROP | HRV_DECEL</td>
+</tr>
+<tr class="bg-surface-container-low text-on-surface">
+<td class="py-1 px-3 text-on-surface-variant">14:28:08.102</td>
+<td class="py-1 px-3 text-on-surface-variant">#INF-9041</td>
+<td class="py-1 px-3 text-on-surface-variant">15.00s [11-step]</td>
+<td class="py-1 px-3 text-right text-primary font-medium">0.62</td>
+<td class="py-1 px-3"><span class="px-1 bg-primary/10 text-primary border border-primary/30">PRECURSOR_RISING</span></td>
+<td class="py-1 px-3 text-tertiary">4.09 ms</td>
+<td class="py-1 px-3 text-right text-primary">AMP_DROP</td>
+</tr>
+<tr class="bg-surface-container-lowest text-on-surface-variant">
+<td class="py-1 px-3">14:28:07.098</td>
+<td class="py-1 px-3">#INF-9040</td>
+<td class="py-1 px-3">15.00s [11-step]</td>
+<td class="py-1 px-3 text-right text-on-surface font-medium">0.51</td>
+<td class="py-1 px-3"><span class="px-1 bg-surface-container-highest text-on-surface">MODERATE_RISK</span></td>
+<td class="py-1 px-3 text-tertiary">4.14 ms</td>
+<td class="py-1 px-3 text-right">RR_VAR_LOW</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- REAL-TIME CONTINUOUS DYNAMIC SIMULATION & HRV BEAT ENGINE -->
+<script>
+  (function () {
+    "use strict";
+
+    // ====================================================================
+    //  MODE MANAGEMENT: SIMULATED <-> RASPBERRY PI
+    // ====================================================================
+    let currentMode = 'simulated'; // 'simulated' | 'rpi'
+    let rpiEcgConnected = false;
+    let rpiRespConnected = false;
+    let rpiPollInterval = null;
+
+    // Raspberry Pi WebSocket / HTTP endpoint (adjust to your Pi's IP)
+    const RPI_BASE_URL = 'http://raspberrypi.local:5000';
+
+    window.setMonitorMode = function(mode) {
+      currentMode = mode;
+      const simBtn = document.getElementById('mode-btn-sim');
+      const rpiBtn = document.getElementById('mode-btn-rpi');
+      const rpiSensorBar = document.getElementById('rpi-sensor-status');
+      const statusText = document.getElementById('mode-status-text');
+      const bridgeText = document.getElementById('bridge-status-text');
+      const streamLabel = document.getElementById('stream-label');
+      const streamIndicator = document.getElementById('stream-indicator');
+      const modeStatusTag = document.getElementById('mode-status-tag');
+
+      if (mode === 'simulated') {
+        simBtn.className = 'px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-primary text-on-primary font-bold border border-primary';
+        rpiBtn.className = 'px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-transparent text-on-surface-variant hover:text-on-surface';
+        if (rpiSensorBar) rpiSensorBar.classList.add('hidden');
+        if (statusText) statusText.textContent = 'SIMULATED / DEV BENCH — NEO-TEST-409A';
+        if (bridgeText) bridgeText.textContent = 'BRIDGE: LOCALHOST:8080 (SIMULATED DUMP FIFO)';
+        if (streamLabel) { streamLabel.textContent = 'STREAMING ACTIVE'; streamLabel.className = 'text-primary font-medium tracking-tight uppercase'; }
+        if (streamIndicator) { streamIndicator.className = 'w-2 h-2 rounded-full bg-primary animate-ping'; }
+        if (modeStatusTag) { modeStatusTag.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 bg-primary/10 border border-primary text-primary font-semibold uppercase tracking-wider'; }
+        // Re-enable simulated waveforms
+        rpiEcgConnected = false; rpiRespConnected = false;
+        stopRpiPoll();
+        applyWaveformOverlays(true, true); // show waveforms
+        simulationPaused = false;
+      } else {
+        simBtn.className = 'px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-transparent text-on-surface-variant hover:text-on-surface';
+        rpiBtn.className = 'px-2.5 py-0.5 font-label-telemetry-xs text-label-telemetry-xs uppercase tracking-wider transition-all rounded-sm bg-tertiary text-on-tertiary font-bold border border-tertiary';
+        if (rpiSensorBar) rpiSensorBar.classList.remove('hidden');
+        if (statusText) statusText.textContent = 'RASPBERRY PI — LIVE SENSOR FEED';
+        if (bridgeText) bridgeText.textContent = 'BRIDGE: ' + RPI_BASE_URL + ' (GPIO/SPI → HTTP)';
+        if (streamLabel) { streamLabel.textContent = 'AWAITING CONNECTION'; streamLabel.className = 'text-error font-medium tracking-tight uppercase'; }
+        if (streamIndicator) { streamIndicator.className = 'w-2 h-2 rounded-full bg-error'; }
+        if (modeStatusTag) { modeStatusTag.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 bg-error/10 border border-error text-error font-semibold uppercase tracking-wider'; }
+        rpiEcgConnected = false; rpiRespConnected = false;
+        applyWaveformOverlays(false, false); // hide until sensors connect
+        simulationPaused = true;
+        updateRpiSensorBadges();
+        startRpiPoll();
+      }
+    };
+
+    // Simulate RPi sensor connect (demo button — replace with real WebSocket)
+    window.simulateRpiConnect = function() {
+      if (currentMode !== 'rpi') return;
+      // Sequentially connect ECG first, then RESP after 1.5s
+      rpiEcgConnected = true;
+      updateRpiSensorBadges();
+      applyWaveformOverlays(true, false);
+      simulationPaused = false;
+      setTimeout(function() {
+        rpiRespConnected = true;
+        updateRpiSensorBadges();
+        applyWaveformOverlays(true, true);
+        const streamLabel = document.getElementById('stream-label');
+        const streamIndicator = document.getElementById('stream-indicator');
+        if (streamLabel) { streamLabel.textContent = 'STREAMING ACTIVE'; streamLabel.className = 'text-tertiary font-medium tracking-tight uppercase'; }
+        if (streamIndicator) { streamIndicator.className = 'w-2 h-2 rounded-full bg-tertiary animate-ping'; }
+      }, 1500);
+      const btn = document.getElementById('rpi-connect-btn');
+      if (btn) btn.textContent = 'Disconnect';
+      if (btn) btn.onclick = function() {
+        rpiEcgConnected = false; rpiRespConnected = false;
+        updateRpiSensorBadges();
+        applyWaveformOverlays(false, false);
+        simulationPaused = true;
+        const sl = document.getElementById('stream-label');
+        const si = document.getElementById('stream-indicator');
+        if (sl) { sl.textContent = 'AWAITING CONNECTION'; sl.className = 'text-error font-medium tracking-tight uppercase'; }
+        if (si) { si.className = 'w-2 h-2 rounded-full bg-error'; }
+        btn.textContent = 'Connect Sensors';
+        btn.onclick = window.simulateRpiConnect;
+      };
+    };
+
+    function updateRpiSensorBadges() {
+      const ecgBadge = document.getElementById('rpi-ecg-badge');
+      const respBadge = document.getElementById('rpi-resp-badge');
+      if (ecgBadge) {
+        if (rpiEcgConnected) {
+          ecgBadge.textContent = 'ECG: ACTIVE'; ecgBadge.className = 'px-1.5 py-0.5 bg-tertiary/15 border border-tertiary text-tertiary font-mono';
+        } else {
+          ecgBadge.textContent = 'ECG: DISCONNECTED'; ecgBadge.className = 'px-1.5 py-0.5 bg-error/15 border border-error text-error font-mono';
+        }
+      }
+      if (respBadge) {
+        if (rpiRespConnected) {
+          respBadge.textContent = 'RESP: ACTIVE'; respBadge.className = 'px-1.5 py-0.5 bg-tertiary/15 border border-tertiary text-tertiary font-mono';
+        } else {
+          respBadge.textContent = 'RESP: DISCONNECTED'; respBadge.className = 'px-1.5 py-0.5 bg-error/15 border border-error text-error font-mono';
+        }
+      }
+    }
+
+    function applyWaveformOverlays(ecgOn, respOn) {
+      const ecgOverlay = document.getElementById('ecg-nosensor-overlay');
+      const respOverlay = document.getElementById('resp-nosensor-overlay');
+      if (ecgOverlay) ecgOverlay.classList.toggle('hidden', ecgOn);
+      if (respOverlay) respOverlay.classList.toggle('hidden', respOn);
+    }
+
+    function startRpiPoll() {
+      // In a real deployment, poll RPI_BASE_URL/status every 2 seconds
+      // For demo purposes this is a no-op placeholder
+      rpiPollInterval = setInterval(function() {
+        // Future: fetch(RPI_BASE_URL + '/vitals').then(r => r.json()).then(updateFromRpi);
+      }, 2000);
+    }
+
+    function stopRpiPoll() {
+      if (rpiPollInterval) { clearInterval(rpiPollInterval); rpiPollInterval = null; }
+    }
+
+    // Simulation pause flag (used by RPi mode to halt simulated canvas updates)
+    let simulationPaused = false;
+
+    // 1. Dynamic Canvas Setup & Resolution Synchronization
+    const ecgCanvas = document.getElementById('ecgCanvas');
+    const respCanvas = document.getElementById('respCanvas');
+    if (!ecgCanvas || !respCanvas) return;
+
+    const ecgCtx = ecgCanvas.getContext('2d');
+    const respCtx = respCanvas.getContext('2d');
+
+    // Oscilloscope scale constants: 1mm = 6.4 pixels (32px = 5mm grid)
+    // 10 mm/s => 64 px/sec
+    // 25 mm/s => 160 px/sec
+    // 50 mm/s => 320 px/sec
+    let currentSweepMm = 25; // default 25 mm/s
+    let currentGainFactor = 1.0; // default 1X (10 mm/mV)
+
+    function updateCalibDisplay() {
+      const calibDisplay = document.getElementById('calib-display');
+      if (calibDisplay) {
+        const gainStr = currentGainFactor === 1.0 ? '10mm/mV' : currentGainFactor === 2.0 ? '20mm/mV' : '50mm/mV';
+        calibDisplay.textContent = 'CALIB: ' + gainStr + ' • ' + currentSweepMm + 'mm/s';
+      }
+      const speedDisplay = document.getElementById('speed-display');
+      if (speedDisplay) {
+        speedDisplay.textContent = 'SPEED: ' + currentSweepMm + ' mm/s • 250 SPS';
+      }
+    }
+
+    // SWEEP CONTROLS HANDLER
+    window.setSweepSpeed = function(val, btnEl) {
+      currentSweepMm = Number(val) || 25;
+      const buttons = document.querySelectorAll('.sweep-btn');
+      buttons.forEach(function(b) {
+        b.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'font-bold', 'shadow-sm');
+        b.classList.add('bg-surface-container-lowest', 'border-surface-container-highest', 'text-on-surface-variant');
+      });
+      if (btnEl) {
+        btnEl.classList.remove('bg-surface-container-lowest', 'border-surface-container-highest', 'text-on-surface-variant');
+        btnEl.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'font-bold', 'shadow-sm');
+      }
+      updateCalibDisplay();
+    };
+
+    // GAIN CONTROLS HANDLER
+    window.setGain = function(val, btnEl) {
+      currentGainFactor = Number(val) || 1.0;
+      const buttons = document.querySelectorAll('.gain-btn');
+      buttons.forEach(function(b) {
+        b.classList.remove('bg-primary', 'text-on-primary', 'border-primary', 'font-bold', 'shadow-sm');
+        b.classList.add('bg-surface-container-lowest', 'border-surface-container-highest', 'text-on-surface-variant');
+      });
+      if (btnEl) {
+        btnEl.classList.remove('bg-surface-container-lowest', 'border-surface-container-highest', 'text-on-surface-variant');
+        btnEl.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'font-bold', 'shadow-sm');
+      }
+      updateCalibDisplay();
+    };
+
+    function resizeCanvases() {
+      const ecgRect = ecgCanvas.parentElement.getBoundingClientRect();
+      const respRect = respCanvas.parentElement.getBoundingClientRect();
+
+      ecgCanvas.width = ecgRect.width || 900;
+      ecgCanvas.height = ecgRect.height || 180;
+      respCanvas.width = respRect.width || 900;
+      respCanvas.height = respRect.height || 180;
+
+      ecgCtx.fillStyle = '#0b0f11';
+      ecgCtx.fillRect(0, 0, ecgCanvas.width, ecgCanvas.height);
+      respCtx.fillStyle = '#0b0f11';
+      respCtx.fillRect(0, 0, respCanvas.width, respCanvas.height);
+    }
+
+    resizeCanvases();
+    window.addEventListener('resize', resizeCanvases);
+
+    // 2. PHYSIOLOGICAL HRV & R-PEAK AMPLITUDE VARIABILITY ENGINE
+    // Based on Notebook 01/03 findings:
+    // Mean RR ~ 0.416s (144 BPM), SDNN ~ 0.045s, EDR amplitude modulation ~ 28%
+    let t = 0; // simulation time in seconds
+    let ecgX = 0;
+    let respX = 0;
+
+    let targetHR = 144;
+    let targetRR = 42;
+
+    let prevEcgY = ecgCanvas.height / 2;
+    let prevRespY = respCanvas.height / 2;
+
+    // Active Beat Parameters
+    let currentBeatOnset = 0;
+    let currentBeatRRSec = 0.416; // 60 / 144 BPM
+    let currentRAmpMod = 1.0;
+    let currentQDepth = -0.16;
+    let currentSDepth = -0.36;
+    let currentBeatDuration = 0.35;
+    let isRPeakTriggered = false;
+
+    function scheduleNextBeat(currentTimeSec) {
+      currentBeatOnset = currentTimeSec;
+      
+      const baseRRSec = 60.0 / targetHR; // e.g. 0.416s
+      
+      // a. Beat-to-Beat HRV Jitter (SDNN = 45ms -> sampled from normal-like jitter)
+      const hrvJitterSec = ((Math.random() + Math.random() + Math.random() - 1.5) / 1.5) * 0.048; 
+      
+      // b. Respiratory Sinus Arrhythmia (RSA): HR speeds up during inspiration
+      const respPeriod = 60.0 / targetRR;
+      const rsaPhase = (currentTimeSec % respPeriod) / respPeriod;
+      const rsaModSec = -0.032 * Math.sin(rsaPhase * 2 * Math.PI); 
+      
+      currentBeatRRSec = Math.max(0.33, Math.min(0.53, baseRRSec + hrvJitterSec + rsaModSec));
+      
+      // c. Beat-to-Beat R-Peak Amplitude Modulation (EDR + Intrinsic Beat Prominence)
+      const respAmpMod = 0.28 * Math.sin(rsaPhase * 2 * Math.PI); // ECG-Derived Respiration
+      const beatRandomNoise = (Math.random() - 0.5) * 0.35;       // Beat-to-beat R-peak height variation
+      currentRAmpMod = Math.max(0.65, Math.min(1.48, 1.0 + respAmpMod + beatRandomNoise));
+      
+      // d. Slight Q and S depth variations
+      currentQDepth = -0.12 - Math.random() * 0.10;
+      currentSDepth = -0.28 - Math.random() * 0.18;
+
+      currentBeatDuration = Math.min(currentBeatRRSec * 0.84, 0.36);
+      isRPeakTriggered = false;
+
+      // Update R-R readout on top header
+      const rrReadout = document.getElementById('live-rr-interval');
+      if (rrReadout) {
+        const rrMs = Math.round(currentBeatRRSec * 1000);
+        rrReadout.textContent = 'RR: ' + rrMs + ' ms';
+      }
+    }
+
+    // Initialize first beat
+    scheduleNextBeat(0);
+
+    function getEcgY(timeSec, height) {
+      if (timeSec >= currentBeatOnset + currentBeatRRSec) {
+        scheduleNextBeat(timeSec);
+      }
+
+      const timeInBeat = timeSec - currentBeatOnset;
+      const phase = timeInBeat / currentBeatDuration; // 0.0 to 1.0 during active beat
+
+      let yNorm = 0; // baseline
+
+      if (phase >= 0.0 && phase <= 1.0) {
+        // P-wave (0.05 - 0.20)
+        if (phase >= 0.05 && phase < 0.20) {
+          yNorm += 0.14 * Math.sin((phase - 0.05) / 0.15 * Math.PI);
+        }
+        // Q-wave (0.22 - 0.26)
+        else if (phase >= 0.22 && phase < 0.26) {
+          yNorm += currentQDepth;
+        }
+        // R-peak (0.26 - 0.32) - multiplied by currentRAmpMod (Varying R-peak height!)
+        else if (phase >= 0.26 && phase < 0.32) {
+          const rShape = Math.sin((phase - 0.26) / 0.06 * Math.PI);
+          yNorm += 1.55 * currentRAmpMod * rShape;
+
+          if (rShape > 0.85 && !isRPeakTriggered) {
+            isRPeakTriggered = true;
+          }
+        }
+        // S-wave (0.32 - 0.38)
+        else if (phase >= 0.32 && phase < 0.38) {
+          yNorm += currentSDepth * Math.sin((phase - 0.32) / 0.06 * Math.PI);
+        }
+        // T-wave (0.50 - 0.75)
+        else if (phase >= 0.50 && phase < 0.75) {
+          yNorm += 0.26 * Math.sin((phase - 0.50) / 0.25 * Math.PI);
+        }
+      }
+
+      // Add high frequency baseline EMG noise
+      yNorm += (Math.random() - 0.5) * 0.03;
+
+      // Baseline pushed to 72% down so R-peaks stay well clear of top annotation labels
+      const midY = height * 0.72;
+      const amp = (height / 4.0) * currentGainFactor;
+      return midY - (yNorm * amp);
+    }
+
+    function getRespY(timeSec, height) {
+      const respPeriod = 60.0 / targetRR;
+      const phase = (timeSec % respPeriod) / respPeriod;
+
+      let respNorm = Math.sin(phase * 2 * Math.PI) * 0.65;
+      respNorm += Math.sin(phase * 4 * Math.PI) * 0.08;
+      respNorm += (Math.random() - 0.5) * 0.02;
+
+      // Shift RESP baseline slightly lower to match ECG canvas positioning
+      const midY = height * 0.52;
+      const amp = (height / 3.2) * currentGainFactor;
+      return midY - (respNorm * amp);
+    }
+
+    // 3. Render Loop
+    let lastFrameTime = performance.now();
+
+    function renderLoop(now) {
+      const deltaMs = now - lastFrameTime;
+      lastFrameTime = now;
+
+      if (simulationPaused) {
+        requestAnimationFrame(renderLoop);
+        return;
+      }
+
+      const dt = Math.min(deltaMs / 1000.0, 0.05);
+      t += dt;
+
+      // Calculate horizontal pixel sweep step dx:
+      // 1mm = 6.4px, so currentSweepMm * 6.4 = px/sec
+      const pxPerSec = currentSweepMm * 6.4;
+      const dx = pxPerSec * dt;
+
+      // --- ECG CHANNEL ---
+      const wEcg = ecgCanvas.width;
+      const hEcg = ecgCanvas.height;
+      const nextEcgX = (ecgX + dx) % wEcg;
+      const currentEcgY = getEcgY(t, hEcg);
+
+      // Eraser cursor bar ahead of sweep
+      ecgCtx.fillStyle = '#0b0f11';
+      ecgCtx.fillRect(nextEcgX, 0, Math.max(16, dx * 3), hEcg);
+
+      if (nextEcgX > ecgX) {
+        ecgCtx.beginPath();
+        ecgCtx.strokeStyle = '#ffbe70'; // Primary amber
+        ecgCtx.lineWidth = 2.2;
+        ecgCtx.moveTo(ecgX, prevEcgY);
+        ecgCtx.lineTo(nextEcgX, currentEcgY);
+        ecgCtx.stroke();
+
+        // Draw R-peak detection dot if triggered
+        if (isRPeakTriggered && currentEcgY < hEcg * 0.35) {
+          ecgCtx.fillStyle = '#ffffff';
+          ecgCtx.beginPath();
+          ecgCtx.arc(nextEcgX, currentEcgY, 2.5, 0, 2 * Math.PI);
+          ecgCtx.fill();
+        }
+      }
+      prevEcgY = currentEcgY;
+      ecgX = nextEcgX;
+
+      // --- RESP CHANNEL ---
+      const wResp = respCanvas.width;
+      const hResp = respCanvas.height;
+      const nextRespX = (respX + dx) % wResp;
+      const currentRespY = getRespY(t, hResp);
+
+      respCtx.fillStyle = '#0b0f11';
+      respCtx.fillRect(nextRespX, 0, Math.max(16, dx * 3), hResp);
+
+      if (nextRespX > respX) {
+        respCtx.beginPath();
+        respCtx.strokeStyle = '#b4d1c8'; // Celadon mint
+        respCtx.lineWidth = 2.2;
+        respCtx.moveTo(respX, prevRespY);
+        respCtx.lineTo(nextRespX, currentRespY);
+        respCtx.stroke();
+      }
+      prevRespY = currentRespY;
+      respX = nextRespX;
+
+      requestAnimationFrame(renderLoop);
+    }
+
+    requestAnimationFrame(renderLoop);
+
+    // 4. Dynamic Telemetry & Risk Values Fluctuator Engine
+    let infCounter = 9043;
+
+    // ========= OSCILLATING APNEA RISK ENGINE =========
+    // Risk moves through a multi-phase wave: nominal → building → peak → recovery → nominal
+    // Period ~90 seconds, oscillating broadly from 0.18 to 0.87
+    let riskPhaseT = 0;  // seconds into the risk cycle
+    const RISK_CYCLE_SEC = 90;
+
+    function computeRiskScore(phaseSec) {
+      // Composite wave: slow sinusoid + faster jitter
+      const slowWave = 0.5 + 0.34 * Math.sin((phaseSec / RISK_CYCLE_SEC) * 2 * Math.PI - Math.PI / 2);
+      const midWave  = 0.07 * Math.sin((phaseSec / 22) * 2 * Math.PI + 1.2);
+      const fastNoise = 0.04 * (Math.random() - 0.5) * 2;
+      return Math.max(0.18, Math.min(0.87, slowWave + midWave + fastNoise));
+    }
+
+    function getRiskClassification(r) {
+      if (r >= 0.65) return { label: 'PRECURSOR_WARN', cls: 'px-1 bg-primary/20 text-primary border border-primary/40 font-bold', badgeText: 'FLAGGED: HIGH CONFIDENCE', badgeCls: 'px-1.5 py-0.5 bg-primary/20 text-primary border border-primary font-label-telemetry-xs text-label-telemetry-xs font-semibold' };
+      if (r >= 0.30) return { label: 'PRECURSOR_RISING', cls: 'px-1 bg-primary/10 text-primary border border-primary/30', badgeText: 'ELEVATED: MONITORING', badgeCls: 'px-1.5 py-0.5 bg-primary/10 text-primary border border-primary/30 font-label-telemetry-xs text-label-telemetry-xs font-semibold' };
+      return { label: 'NOMINAL', cls: 'px-1 bg-tertiary/10 text-tertiary border border-tertiary/30', badgeText: 'NOMINAL: LOW RISK', badgeCls: 'px-1.5 py-0.5 bg-tertiary/10 text-tertiary border border-tertiary/30 font-label-telemetry-xs text-label-telemetry-xs font-semibold' };
+    }
+
+    setInterval(function () {
+      riskPhaseT += 1; // 1-second tick
+
+      const hrFluct = Math.floor(138 + Math.random() * 10); // 138 - 148 BPM
+      const rrFluct = Math.floor(38 + Math.random() * 8);   // 38 - 46 BR/MIN
+      const spo2Fluct = Math.floor(94 + Math.random() * 4); // 94 - 97%
+      const tempFluct = (36.6 + Math.random() * 0.5).toFixed(1);
+      const latencyFluct = (4.06 + Math.random() * 0.18).toFixed(2);
+      const riskScore = computeRiskScore(riskPhaseT);
+      const riskFluct = riskScore.toFixed(2);
+      const riskClass = getRiskClassification(riskScore);
+
+      // Lead time estimate: higher risk → shorter lead time
+      const leadTimeSec = Math.round(25 - riskScore * 20);
+      const leadTimeStr = leadTimeSec > 5 ? 'EST. EVENT IN ~' + leadTimeSec + 's' : 'IMMINENT';
+
+      targetHR = hrFluct;
+      targetRR = rrFluct;
+
+      const hrEl = document.getElementById('live-hr-val');
+      const rrEl = document.getElementById('live-rr-val');
+      const spo2El = document.getElementById('live-spo2-val');
+      const tempEl = document.getElementById('live-temp-val');
+      const latencyEl = document.getElementById('live-latency-val');
+      const riskEl = document.getElementById('risk-scalar-display');
+      const riskGauge = document.getElementById('risk-gauge-bar');
+      const riskBadgeBox = document.getElementById('risk-badge-box');
+      const riskWarningTitle = document.getElementById('risk-warning-title');
+      const riskLeadTime = document.getElementById('risk-lead-time');
+      const dieTempEl = document.getElementById('live-die-temp');
+      const syncClockEl = document.getElementById('sync-clock-display');
+      const sparklineTag = document.getElementById('sparkline-current-tag');
+
+      if (hrEl) hrEl.textContent = hrFluct;
+      if (rrEl) rrEl.textContent = rrFluct;
+      if (spo2El) spo2El.textContent = spo2Fluct;
+      if (tempEl) tempEl.textContent = tempFluct;
+      if (latencyEl) latencyEl.textContent = latencyFluct;
+      if (riskEl) riskEl.textContent = riskFluct;
+      if (riskGauge) riskGauge.style.width = (riskScore * 100) + '%';
+      if (riskBadgeBox) { riskBadgeBox.textContent = riskClass.badgeText; riskBadgeBox.className = riskClass.badgeCls; }
+      if (riskWarningTitle) { riskWarningTitle.textContent = riskScore >= 0.65 ? 'PRECURSOR WARNING' : riskScore >= 0.30 ? 'ELEVATED WATCH' : 'NOMINAL STATE'; }
+      if (riskLeadTime) riskLeadTime.textContent = leadTimeStr;
+      if (sparklineTag) sparklineTag.textContent = 'T-0s [' + riskFluct + ']';
+      if (dieTempEl) dieTempEl.textContent = (45.5 + Math.random() * 1.2).toFixed(1) + ' °C';
+
+      if (syncClockEl) {
+        const d = new Date();
+        syncClockEl.textContent = String(d.getUTCHours()).padStart(2, '0') + ':' +
+                                  String(d.getUTCMinutes()).padStart(2, '0') + ':' +
+                                  String(d.getUTCSeconds()).padStart(2, '0') + '.' +
+                                  String(d.getUTCMilliseconds()).padStart(3, '0');
+      }
+
+      const feat1Bar = document.getElementById('feat-1-bar');
+      const feat2Bar = document.getElementById('feat-2-bar');
+      const feat3Bar = document.getElementById('feat-3-bar');
+      const feat1Val = document.getElementById('feat-1-val');
+      const feat2Val = document.getElementById('feat-2-val');
+      const feat3Val = document.getElementById('feat-3-val');
+      // Feature bars scale with risk
+      const scaleFactor = riskScore;
+      if (feat1Bar) feat1Bar.style.width = Math.round(30 + scaleFactor * 65) + '%';
+      if (feat2Bar) feat2Bar.style.width = Math.round(22 + scaleFactor * 58) + '%';
+      if (feat3Bar) feat3Bar.style.width = Math.round(18 + scaleFactor * 52) + '%';
+      const ampDrop = Math.round(-10 - riskScore * 45);
+      const rmssd = (25 - riskScore * 18).toFixed(1);
+      const lfhf  = (0.8 + riskScore * 2.1).toFixed(1);
+      if (feat1Val) feat1Val.textContent = ampDrop + '% (Drop)';
+      if (feat2Val) feat2Val.textContent = rmssd + ' ms (Low)';
+      if (feat3Val) feat3Val.textContent = '+' + lfhf + 'x Shift';
+
+      // Color the risk display depending on level
+      if (riskEl) {
+        if (riskScore >= 0.65) riskEl.className = 'font-headline-xl text-headline-xl text-primary font-semibold tracking-tighter';
+        else if (riskScore >= 0.30) riskEl.className = 'font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tighter';
+        else riskEl.className = 'font-headline-xl text-headline-xl text-tertiary font-semibold tracking-tighter';
+      }
+
+      const attnPct = Math.round(riskScore * 65);
+      const attnEl = document.getElementById('live-attenuation-val');
+      if (attnEl) attnEl.textContent = 'ATTENUATION -' + attnPct + '%';
+      const respBadgeEl = document.getElementById('live-resp-badge');
+      if (respBadgeEl) respBadgeEl.textContent = riskScore > 0.50 ? 'SUPPRESSED' : riskScore > 0.30 ? 'ATTENUATED' : 'NORMAL';
+      const ampDropTag = document.getElementById('live-amp-drop-tag');
+      if (ampDropTag) ampDropTag.textContent = riskScore > 0.30 ? '[AMPLITUDE DROP DETECTED]' : '[AMPLITUDE STABLE]';
+      const respPhaseEl = document.getElementById('live-resp-phase');
+      if (respPhaseEl) {
+        const phases = ['PHASE: SHALLOW EXPIRATORY', 'PHASE: INSPIRATORY PLATEAU', 'PHASE: EXPIRATORY PAUSE', 'PHASE: NORMAL CYCLE'];
+        respPhaseEl.textContent = riskScore > 0.55 ? phases[0] : riskScore > 0.35 ? phases[2] : phases[3];
+      }
+
+      const tableBody = document.getElementById('log-table-body');
+      if (tableBody) {
+        const nowStr = new Date().toISOString().substring(11, 23);
+        const newRow = document.createElement('tr');
+        newRow.className = (riskScore >= 0.65 ? 'bg-primary/5' : 'bg-surface-container-lowest') + ' text-on-surface transition-colors';
+        newRow.innerHTML =
+          '<td class="py-1 px-3 ' + (riskScore >= 0.65 ? 'text-primary' : 'text-on-surface-variant') + ' font-semibold">' + nowStr + '</td>' +
+          '<td class="py-1 px-3 text-on-surface-variant">#INF-' + infCounter++ + '</td>' +
+          '<td class="py-1 px-3 text-on-surface-variant">15.00s [11-step]</td>' +
+          '<td class="py-1 px-3 text-right ' + (riskScore >= 0.65 ? 'text-primary font-bold' : riskScore >= 0.30 ? 'text-on-surface font-medium' : 'text-tertiary') + '">' + riskFluct + '</td>' +
+          '<td class="py-1 px-3"><span class="' + riskClass.cls + '">' + riskClass.label + '</span></td>' +
+          '<td class="py-1 px-3 text-tertiary">' + latencyFluct + ' ms</td>' +
+          '<td class="py-1 px-3 text-right ' + (riskScore >= 0.30 ? 'text-primary' : 'text-on-surface-variant') + '">' + (riskScore >= 0.65 ? 'AMP_DROP | HRV_DECEL' : riskScore >= 0.30 ? 'AMP_DROP' : 'STABLE') + '</td>';
+        tableBody.insertBefore(newRow, tableBody.firstChild);
+        while (tableBody.children.length > 5) {
+          tableBody.removeChild(tableBody.lastChild);
+        }
+      }
+
+    }, 1000);
+
+  })();
+</script>
+
+</div></main>
+
+<footer class="w-full bg-surface-container-lowest border-t border-surface-container-highest px-space-lg py-space-sm"><div class="flex flex-col lg:flex-row items-center justify-between gap-space-sm font-label-telemetry-xs text-label-telemetry-xs"><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="text-error font-semibold">[!]</span><span>RESEARCH PROTOTYPE • NOT FOR CLINICAL DIAGNOSTIC USE • ETHICAL EXPERIMENTAL HARNESS V1.4-RC2</span></div><div class="flex items-center gap-space-sm flex-wrap"><div class="flex items-center gap-1.5 px-space-sm py-0.5 bg-surface-container-low border border-surface-container-highest"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="text-on-surface-variant">ECG:</span><span class="text-tertiary font-semibold">ACTIVE</span></div><div class="flex items-center gap-1.5 px-space-sm py-0.5 bg-surface-container-low border border-surface-container-highest"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="text-on-surface-variant">RESP:</span><span class="text-tertiary font-semibold">ACTIVE</span></div><div class="flex items-center gap-1.5 px-space-sm py-0.5 bg-surface-container-low border border-surface-container-highest"><span class="w-1.5 h-1.5 bg-primary"></span><span class="text-on-surface-variant">PPG:</span><span class="text-primary font-semibold">PENDING</span></div><div class="flex items-center gap-1.5 px-space-sm py-0.5 bg-surface-container-low border border-surface-container-highest"><span class="w-1.5 h-1.5 bg-outline"></span><span class="text-on-surface-variant">TEMP:</span><span class="text-outline font-semibold">STANDBY</span></div></div></div></footer>
+
+<script src="../js/navigation.js"></script>
+</body></html>
